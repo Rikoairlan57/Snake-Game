@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Food : MonoBehaviour
 {
@@ -13,11 +14,9 @@ public class Food : MonoBehaviour
     {
         Bounds bounds = gridArea.bounds;
 
-        // Pick a random position inside the bounds
         float x = Random.Range(bounds.min.x, bounds.max.x);
         float y = Random.Range(bounds.min.y, bounds.max.y);
-
-        // Round the values to ensure it aligns with the grid
+   
         x = Mathf.Round(x);
         y = Mathf.Round(y);
 
